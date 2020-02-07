@@ -37,5 +37,3 @@ class PhotoParser
     @photo_urls -= [""]
   end
 end
-
-puts Valakas.photo_urls
