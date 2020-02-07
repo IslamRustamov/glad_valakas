@@ -1,4 +1,3 @@
-require 'rspec/autorun'
 require './lib/glad_valakas.rb'
 
 describe PhotoParser do
@@ -18,7 +17,7 @@ end
 
 describe Valakas do
   it "returns URLs of photos" do
-    expect(@parser.get_photos_urls).not_to be_nil
+    expect(Valakas.photo_urls).not_to be_nil
     expect(Valakas.photo_urls.size).to be > 0
   end
 end
