@@ -3,7 +3,11 @@ require 'httparty'
 
 class Valakas
   def self.photo_urls
-    PhotoParser.new.get_photos_urls
+    begin
+      PhotoParser.new.get_photos_urls
+    rescue
+      puts "Error occured while getting pictues"
+    end
   end
 end
 
@@ -33,3 +37,5 @@ class PhotoParser
     @photo_urls -= [""]
   end
 end
+
+puts Valakas.photo_urls
